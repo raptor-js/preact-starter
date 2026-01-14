@@ -1,0 +1,37 @@
+{
+  "tasks": {
+    "build": "deno run -A npm:vite build",
+    "dev": "deno run -A npm:vite build --watch & deno run server:start",
+    "server:start": "deno serve -A --watch ./bin/index.ts"
+  },
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "strict": true
+  },
+  "imports": {
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.6",
+    "@raptor/error": "jsr:@raptor/error@^0.8.3",
+    "@raptor/framework": "jsr:@raptor/framework@^0.14.6",
+    "@raptor/router": "jsr:@raptor/router@^0.14.2",
+    "@raptor/static": "jsr:@raptor/static@^0.3.2",
+    "@raptor/validator": "jsr:@raptor/validator@^0.6.2",
+    "autoprefixer": "npm:autoprefixer@^10.4.23",
+    "cssnano": "npm:cssnano@^7.1.2",
+    "esbuild": "npm:esbuild@^0.27.2",
+    "esbuild-postcss": "npm:esbuild-postcss@^0.0.4",
+    "postcss": "npm:postcss@^8.5.6",
+    "preact": "npm:preact@10.28.2",
+    "preact/jsx-runtime": "npm:preact@10.28.2/jsx-runtime",
+    "preact/": "npm:preact@10.28.2/",
+    "preact-iso": "npm:preact-iso@2.11.1",
+    "ventojs": "npm:ventojs@^2.3.0",
+    "vite": "npm:vite@^7.3.1",
+    "@preact/preset-vite": "npm:@preact/preset-vite@^2.10.2"
+  },
+  "deploy": {
+    "org": "bri",
+    "app": "raptor-website"
+  }
+}
