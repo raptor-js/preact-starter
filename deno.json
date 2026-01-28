@@ -12,11 +12,11 @@
   },
   "imports": {
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.6",
-    "@raptor/error": "jsr:@raptor/error@^0.8.3",
-    "@raptor/framework": "jsr:@raptor/framework@^0.14.6",
-    "@raptor/router": "jsr:@raptor/router@^0.14.2",
-    "@raptor/static": "jsr:@raptor/static@^0.3.2",
-    "@raptor/validator": "jsr:@raptor/validator@^0.6.2",
+    "@raptor/error": "jsr:@raptor/error@^0.9.0",
+    "@raptor/framework": "jsr:@raptor/framework@^0.16.1",
+    "@raptor/router": "jsr:@raptor/router@^0.17.0",
+    "@raptor/static": "jsr:@raptor/static@^0.4.0",
+    "@raptor/validator": "jsr:@raptor/validator@^0.8.0",
     "autoprefixer": "npm:autoprefixer@^10.4.23",
     "cssnano": "npm:cssnano@^7.1.2",
     "esbuild": "npm:esbuild@^0.27.2",
@@ -28,6 +28,6 @@
     "preact-iso": "npm:preact-iso@2.11.1",
     "ventojs": "npm:ventojs@^2.3.0",
     "vite": "npm:vite@^7.3.1",
-    "@preact/preset-vite": "npm:@preact/preset-vite@^2.10.2"
+    "@preact/preset-vite": "npm:@preact/preset-vite@^2.10.3"
   }
 }

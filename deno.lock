@@ -1,13 +1,14 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@raptor/error@~0.8.3": "0.8.3",
-    "jsr:@raptor/framework@~0.14.6": "0.14.6",
-    "jsr:@raptor/router@~0.14.2": "0.14.2",
-    "jsr:@raptor/static@~0.3.2": "0.3.2",
-    "jsr:@raptor/validator@~0.6.2": "0.6.2",
+    "jsr:@raptor/error@0.9": "0.9.0",
+    "jsr:@raptor/framework@0.16": "0.16.1",
+    "jsr:@raptor/framework@~0.16.1": "0.16.1",
+    "jsr:@raptor/router@0.17": "0.17.0",
+    "jsr:@raptor/static@0.4": "0.4.0",
+    "jsr:@raptor/validator@0.8": "0.8.0",
     "npm:@deno/vite-plugin@^1.0.6": "1.0.6_vite@7.3.1__picomatch@4.0.3",
-    "npm:@preact/preset-vite@^2.10.2": "2.10.2_@babel+core@7.28.6_vite@7.3.1__picomatch@4.0.3_preact@10.28.2",
+    "npm:@preact/preset-vite@^2.10.3": "2.10.3_@babel+core@7.28.6_vite@7.3.1__picomatch@4.0.3_preact@10.28.2",
     "npm:autoprefixer@^10.4.23": "10.4.23_postcss@8.5.6",
     "npm:cssnano@^7.1.2": "7.1.2_postcss@8.5.6",
     "npm:esbuild-postcss@^0.0.4": "0.0.4_esbuild@0.27.2_postcss@8.5.6",
@@ -21,33 +22,30 @@
     "npm:vite@^7.3.1": "7.3.1_picomatch@4.0.3"
   },
   "jsr": {
-    "@raptor/error@0.8.3": {
-      "integrity": "cf341211f8c446d047d5371e1672260671b6d0f5e07b37277a4c7f13f2ac568b",
+    "@raptor/error@0.9.0": {
+      "integrity": "4a76c2c38721e7417db111d1b61aa150a9c0bdf74769c6dd53da62c2ff9eeef1",
       "dependencies": [
-        "jsr:@raptor/framework",
+        "jsr:@raptor/framework@~0.16.1",
         "npm:shiki",
         "npm:ventojs"
       ]
     },
-    "@raptor/framework@0.14.6": {
-      "integrity": "3bad242840f6d0981d09caa44ee697ec6d654698c29442b50e93373722d9b8e9"
+    "@raptor/framework@0.16.1": {
+      "integrity": "3d2b5875b93fc6e77e4c070d09f61334ef8bf03f3cfcedd094af3de0b61472c0"
     },
-    "@raptor/router@0.14.2": {
-      "integrity": "44a0fcc1c1a64a56e9b460195def075cce76b9181e5a7ec8039f567829b35796",
+    "@raptor/router@0.17.0": {
+      "integrity": "e278c2bb6713f6ba2b048deb3380861615b7fa0a055c6e3c4f4caced46d8dc7c",
       "dependencies": [
-        "jsr:@raptor/framework"
+        "jsr:@raptor/framework@0.16"
       ]
     },
-    "@raptor/static@0.3.2": {
-      "integrity": "e92ebe9ddae7c3ccae6bd31df9845a5dbcc0482b90b38413437dc0bcd3837c04",
-      "dependencies": [
-        "jsr:@raptor/framework"
-      ]
+    "@raptor/static@0.4.0": {
+      "integrity": "cc059836510d7c6af98631fd74f88107b1da7c3d730bae95a8c246fe624c419f"
     },
-    "@raptor/validator@0.6.2": {
-      "integrity": "4fd833c821c5d1e863c1751f0acbb6c5ebe2a3dc3e1e95372de502e710192c73",
+    "@raptor/validator@0.8.0": {
+      "integrity": "e99e8a6aec7df713c86c5269781059fcad17756781a58173fd2166d43b3108d1",
       "dependencies": [
-        "jsr:@raptor/framework"
+        "jsr:@raptor/framework@~0.16.1"
       ]
     }
   },
@@ -369,14 +367,14 @@
         "@jridgewell/sourcemap-codec"
       ]
     },
-    "@preact/preset-vite@2.10.2_@babel+core@7.28.6_vite@7.3.1__picomatch@4.0.3_preact@10.28.2": {
-      "integrity": "sha512-K9wHlJOtkE+cGqlyQ5v9kL3Ge0Ql4LlIZjkUTL+1zf3nNdF88F9UZN6VTV8jdzBX9Fl7WSzeNMSDG7qECPmSmg==",
+    "@preact/preset-vite@2.10.3_@babel+core@7.28.6_vite@7.3.1__picomatch@4.0.3_preact@10.28.2": {
+      "integrity": "sha512-1SiS+vFItpkNdBs7q585PSAIln0wBeBdcpJYbzPs1qipsb/FssnkUioNXuRsb8ZnU8YEQHr+3v8+/mzWSnTQmg==",
       "dependencies": [
         "@babel/core",
         "@babel/plugin-transform-react-jsx",
         "@babel/plugin-transform-react-jsx-development",
         "@prefresh/vite",
-        "@rollup/pluginutils",
+        "@rollup/pluginutils@5.3.0",
         "babel-plugin-transform-hook-names",
         "debug",
         "picocolors",
@@ -403,7 +401,7 @@
         "@prefresh/babel-plugin",
         "@prefresh/core",
         "@prefresh/utils",
-        "@rollup/pluginutils",
+        "@rollup/pluginutils@4.2.1",
         "preact",
         "vite"
       ]
@@ -413,6 +411,14 @@
       "dependencies": [
         "estree-walker",
         "picomatch@2.3.1"
+      ]
+    },
+    "@rollup/pluginutils@5.3.0": {
+      "integrity": "sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==",
+      "dependencies": [
+        "@types/estree",
+        "estree-walker",
+        "picomatch@4.0.3"
       ]
     },
     "@rollup/rollup-android-arm-eabi@4.55.1": {
@@ -1438,8 +1444,8 @@
         "unist-util-is"
       ]
     },
-    "unist-util-visit@5.0.0": {
-      "integrity": "sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==",
+    "unist-util-visit@5.1.0": {
+      "integrity": "sha512-m+vIdyeCOpdr/QeQCu2EzxX/ohgS8KbnPDgFni4dQsfSCtpz8UqDyY5GjRru8PDKuYn7Fq19j1CQ+nJSsGKOzg==",
       "dependencies": [
         "@types/unist",
         "unist-util-is",
@@ -1514,13 +1520,13 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@raptor/error@~0.8.3",
-      "jsr:@raptor/framework@~0.14.6",
-      "jsr:@raptor/router@~0.14.2",
-      "jsr:@raptor/static@~0.3.2",
-      "jsr:@raptor/validator@~0.6.2",
+      "jsr:@raptor/error@0.9",
+      "jsr:@raptor/framework@~0.16.1",
+      "jsr:@raptor/router@0.17",
+      "jsr:@raptor/static@0.4",
+      "jsr:@raptor/validator@0.8",
       "npm:@deno/vite-plugin@^1.0.6",
-      "npm:@preact/preset-vite@^2.10.2",
+      "npm:@preact/preset-vite@^2.10.3",
       "npm:autoprefixer@^10.4.23",
       "npm:cssnano@^7.1.2",
       "npm:esbuild-postcss@^0.0.4",

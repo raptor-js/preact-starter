@@ -1,8 +1,8 @@
 import { Router } from "@raptor/router";
+import { Kernel } from "@raptor/framework";
 import { ErrorHandler } from "@raptor/error";
 import { Validator } from "@raptor/validator";
 import { StaticHandler } from "@raptor/static";
-import { Context, Kernel } from "@raptor/framework";
 
 import routes from "../routes/web.ts";
 
@@ -16,24 +16,17 @@ const staticHandler = new StaticHandler("public");
 
 const app = new Kernel();
 
-app.add((context: Context, next: CallableFunction) => {
-  return validator.handle(context, next);
-})
+app.add(validator.handle);
 
-app.add((context: Context, next: CallableFunction) =>
-  staticHandler.handle(
-    context,
-    next,
-  )
-);
+app.add(staticHandler.handle);
 
 const router = new Router();
 
 router.addRoutes(routes);
 
-app.add((context: Context) => router.handle(context));
+app.add(router.handle);
 
-app.catch((context: Context) => errorHandler.handle(context));
+app.catch(errorHandler.handle);
 
 export default {
   fetch: (request: Request) => {

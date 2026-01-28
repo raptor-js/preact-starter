@@ -6,6 +6,12 @@ const routes = [
   new Route({
     name: "index",
     method: HttpMethod.GET,
+    pathname: "/",
+    handler: indexAction,
+  }),
+  new Route({
+    name: "index",
+    method: HttpMethod.GET,
     pathname: "/*",
     handler: indexAction,
   }),
