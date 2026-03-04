@@ -1,32 +1,19 @@
-import { Router } from "@raptor/router";
-import { Kernel } from "@raptor/framework";
-import { ErrorHandler } from "@raptor/error";
-import { Validator } from "@raptor/validator";
-import { StaticHandler } from "@raptor/static";
+import { Kernel } from "@raptor/kernel";
 
-import routes from "../routes/web.ts";
+import router from "@raptor/router";
+import validator from "@raptor/validator";
+import errorHandler from "@raptor/error";
+import staticFileHandler from "@raptor/static";
 
-const validator = new Validator();
+import config from "../raptor.config.ts";
 
-const errorHandler = new ErrorHandler({
-  env: "development",
-});
+const app = new Kernel(config.kernel);
 
-const staticHandler = new StaticHandler("public");
+app.use(validator(config.validator));
+app.use(staticFileHandler(config.static));
+app.use(router(config.router));
 
-const app = new Kernel();
-
-app.add(validator.handle);
-
-app.add(staticHandler.handle);
-
-const router = new Router();
-
-router.addRoutes(routes);
-
-app.add(router.handle);
-
-app.catch(errorHandler.handle);
+app.catch(errorHandler(config.error));
 
 export default {
   fetch: (request: Request) => {
