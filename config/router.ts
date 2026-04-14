@@ -1,4 +1,4 @@
-import { HttpMethod } from "@raptor/kernel";
+import { HttpMethod } from "@raptor/types";
 import { type Config } from "@raptor/router";
 
 import indexAction from "../app/http/actions/index.ts";
